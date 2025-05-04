@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache files
+*.cache
+*.log
+
+# Configurations and system files
+*.ini
+*.json
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+
+# Python packaging
+dist/
+build/
+*.egg-info/
+
+# Pip dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test and coverage files
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+.coverage.*
+
+# Temporary files
+*.tmp
+*.bak
