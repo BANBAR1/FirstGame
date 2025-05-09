@@ -1,15 +1,15 @@
 import random
 from functions.validation import are_symbols_same
+from nltk.corpus import words
 
 
 def find_random_word(lenght):
-    with open('Words.txt', 'r') as file:
-        words = file.read().split(",")
-        target_words = []
-        for word in words:
-            if len(word) == lenght:
-                target_words.append(word)
-        return random.choice(target_words)
+    english_words = words.words()
+    target_words = []
+    for word in english_words:
+        if len(word) == lenght:
+            target_words.append(word)
+    return random.choice(target_words)
 
 
 def find_right_letters(user_word, guess_word, match_letters: list):

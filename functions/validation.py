@@ -30,4 +30,5 @@ def ask_and_check_user_word(lenght: int):
     while not is_valid == True:
         user_word = input("Enter your word:")
         is_valid = validate_word(user_word, lenght)
+
     return user_word
