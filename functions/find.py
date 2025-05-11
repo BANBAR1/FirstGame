@@ -1,10 +1,11 @@
 import random
 from functions.validation import are_symbols_same
+import nltk
+nltk.download('words')
 from nltk.corpus import words
 
-
 def find_random_word(lenght):
-    english_words = words.words()
+    english_words = set(words.words())
     target_words = []
     for word in english_words:
         if len(word) == lenght:
