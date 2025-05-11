@@ -1,8 +1,8 @@
 import random
-from functions.validation import are_symbols_same
 import nltk
 nltk.download('words')
 from nltk.corpus import words
+from functions.validation import are_symbols_same
 
 def find_random_word(lenght):
     english_words = set(words.words())
