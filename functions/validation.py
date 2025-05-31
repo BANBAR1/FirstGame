@@ -1,5 +1,5 @@
 import re
-
+from functions.nltk_functions import english_words
 
 def all_english_letters(s):
     return bool(re.fullmatch(r'[a-zA-Z]+', s))
@@ -21,8 +21,11 @@ def validate_word(user_word, lenght):
     check2 = all_english_letters(user_word)
     if not check2:
         print("Your word must have only English letters")
-
-    return check1 and check2
+    
+    check3 = user_word in english_words
+    if not check3:
+        print("Your word must be in the English dictionary")
+    return check1 and check2 and check3
 
 
 def ask_and_check_user_word(lenght: int):
