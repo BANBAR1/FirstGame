@@ -23,7 +23,9 @@ while number_of_attempts > 0:
 
     if guess_word.lower() == user_word.lower():
         print("You won!")
+        input("Press Enter to exit...")
         exit()
     number_of_attempts -= 1
 
 print(f"You lose! The guess word is: {guess_word}")
+input("Press Enter to exit...")
