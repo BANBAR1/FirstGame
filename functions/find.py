@@ -6,29 +6,29 @@ def find_random_word(lenght):
     target_words = []
     for word in english_words:
         if len(word) == lenght:
-            target_words.append(word)
+            target_words.append(word.lower())
     return random.choice(target_words)
 
 
-def find_right_letters(user_word, guess_word, match_letters: list):
-    right_letters = []
-    found_letters = []
+def find_right_indexes(user_word, guess_word, match_indexes: list):
+    right_indexes = []
+    found_indexes = []
     for i in range(len(user_word)):
-        if i in match_letters:
+        if i in match_indexes:
             continue
 
         for j in range(len(guess_word)):
-            if j not in match_letters and j not in found_letters:
+            if j not in match_indexes and j not in found_indexes:
                 if are_symbols_same(guess_word[j], user_word[i]):
-                    found_letters.append(j)
-                    right_letters.append(i)
+                    found_indexes.append(j)
+                    right_indexes.append(i)
                     break
-    return right_letters
+    return right_indexes
 
 
-def find_match_letters(user_word, guess_word):
-    match_letters = []
+def find_match_indexes(user_word, guess_word):
+    match_indexes = []
     for i in range(len(user_word)):
         if are_symbols_same(user_word[i], guess_word[i]):
-            match_letters.append(i)
-    return match_letters
+            match_indexes.append(i)
+    return match_indexes
