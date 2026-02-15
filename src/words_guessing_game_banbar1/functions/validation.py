@@ -1,5 +1,5 @@
 import re
-from functions.nltk_functions import english_words
+from words_guessing_game_banbar1.functions.word_loader import english_words
 
 def all_english_letters(s):
     return bool(re.fullmatch(r'[a-zA-Z]+', s))
@@ -34,4 +34,4 @@ def ask_and_check_user_word(lenght: int):
         user_word = input("Enter your word:")
         is_valid = validate_word(user_word, lenght)
 
-    return user_word
+    return user_word.lower()

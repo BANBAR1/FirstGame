@@ -1,12 +1,12 @@
 import random
-from functions.validation import are_symbols_same
-from functions.nltk_functions import english_words
+from words_guessing_game_banbar1.functions.validation import are_symbols_same
+from words_guessing_game_banbar1.functions.word_loader import english_words
  
 def find_random_word(lenght):
     target_words = []
     for word in english_words:
         if len(word) == lenght:
-            target_words.append(word.lower())
+            target_words.append(word)
     return random.choice(target_words)
 
 

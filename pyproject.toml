@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "words_guessing_game_banbar1"
+version = "0.0.2"
+authors = [
+  { name="BANBAR1", email="rkorovechkiy@gmail.com" },
+]
+description = "A Wordle-style word guessing game with Pygame UI"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "pygame>=2.6.0",
+]
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/BANBAR1/FirstGame"
+Issues = "https://github.com/BANBAR1/FirstGame/issues"
+

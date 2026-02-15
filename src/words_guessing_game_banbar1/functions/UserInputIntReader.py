@@ -21,9 +21,9 @@ class UserInputIntReader:
 
 class AttemptsReader(UserInputIntReader):
     def is_number_valid(self, input_number: int) -> bool:
-        return input_number > 0 and input_number <= 10
+        return input_number >= 1 and input_number <= 10
 
 
 class LengthReader(UserInputIntReader):
     def is_number_valid(self, input_number: int) -> bool:
-        return input_number > 2 and input_number <= 11
+        return input_number >= 3 and input_number <= 11
